@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 ##################################################
 # Gnuradio Python Flow Graph
-# Title: Wav To Raw
-# Generated: Thu Nov  5 22:29:43 2015
+# Title: Wav To Raw Iq
+# Generated: Thu Nov  5 22:42:09 2015
 ##################################################
 
 from gnuradio import blocks
@@ -15,10 +15,10 @@ from grc_gnuradio import wxgui as grc_wxgui
 from optparse import OptionParser
 import wx
 
-class wav_to_raw(grc_wxgui.top_block_gui):
+class wav_to_raw_iq(grc_wxgui.top_block_gui):
 
     def __init__(self):
-        grc_wxgui.top_block_gui.__init__(self, title="Wav To Raw")
+        grc_wxgui.top_block_gui.__init__(self, title="Wav To Raw Iq")
         _icon_path = "/usr/share/icons/hicolor/32x32/apps/gnuradio-grc.png"
         self.SetIcon(wx.Icon(_icon_path, wx.BITMAP_TYPE_ANY))
 
@@ -59,6 +59,6 @@ if __name__ == '__main__':
             print "Warning: failed to XInitThreads()"
     parser = OptionParser(option_class=eng_option, usage="%prog: [options]")
     (options, args) = parser.parse_args()
-    tb = wav_to_raw()
+    tb = wav_to_raw_iq()
     tb.Start(True)
     tb.Wait()
